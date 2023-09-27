@@ -82,14 +82,14 @@ const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
       <div className="flex items-center justify-between">
         <Heading title="Settings" description="Manage store preferences" />
         <Button variant="destructive" size="icon" onClick={() => setOpen(true)}>
-          <Trash className="h-4 w-4" />
+          <Trash className="w-4 h-4" />
         </Button>
       </div>
       <Separator />
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-8 w-full"
+          className="w-full space-y-8"
         >
           <div className="grid grid-cols-3 gap-8">
             <FormField

@@ -59,7 +59,7 @@ export const StoreModal = () => {
       isOpen={storeModal.isOpen}
       onClose={storeModal.onClose}
     >
-      <div className="space-y-4 py-2 pb-4">
+      <div className="py-2 pb-4 space-y-4">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <FormField
@@ -79,7 +79,7 @@ export const StoreModal = () => {
                 </FormItem>
               )}
             />
-            <div className="pt-6 space-x-2 flex items-center justify-end">
+            <div className="flex items-center justify-end pt-6 space-x-2">
               <Button
                 disabled={loading}
                 variant="outline"
