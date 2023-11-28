@@ -24,15 +24,15 @@ export async function POST(
       return new NextResponse(" ImageUrl is required", { status: 400 });
     }
 
-    const bilboard = await prismadb.billboard.create({
+    const billboard = await prismadb.billboard.create({
       data: {
         label,
         imageUrl,
-        storeId,
+        storeId: params.storeId,
       },
     });
 
-    return NextResponse.json(store);
+    return NextResponse.json(billboard);
   } catch (error) {
     console.log("[STORES_POST]", error);
     return new NextResponse("Internal error", { status: 500 });
